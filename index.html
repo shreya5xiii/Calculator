@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator </title>
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+      <div id="display">
+        <div id="arith"></div>
+      </div>
+      <div class="subdiv">
+      <button class="block long" onclick="document.getElementById('arith').innerHTML=''" >AC</button>
+      <button class="block"  onclick="fun()">DEL</button>
+      <button class="block"  onclick="document.getElementById('arith').innerHTML+='/'">/</button>
+    </div>
+    <div  class="subdiv">
+      <button class="block" onclick="document.getElementById('arith').innerHTML+=7">7</button>
+      <button class="block" onclick="document.getElementById('arith').innerHTML+=8">8</button>
+      <button class="block" onclick="document.getElementById('arith').innerHTML+=9">9</button>
+      <button class="block" onclick="document.getElementById('arith').innerHTML+='+'">+</button>
+    </div>
+    <div class="subdiv">
+      <button class="block" onclick="document.getElementById('arith').innerHTML+=4">4</button>
+      <button class="block" onclick="document.getElementById('arith').innerHTML+=5">5</button>
+      <button class="block" onclick="document.getElementById('arith').innerHTML+=6">6</button>
+      <button class="block" onclick="document.getElementById('arith').innerHTML+='-'">-</button>
+    </div>
+    <div class="subdiv">
+      <button class="block" onclick="document.getElementById('arith').innerHTML+=1">1</button>
+      <button class="block" onclick="document.getElementById('arith').innerHTML+=2">2</button>
+      <button class="block" onclick="document.getElementById('arith').innerHTML+=3">3</button>
+      <button class="block" onclick="document.getElementById('arith').innerHTML+='*'">*</button>
+    </div>
+    <div class="subdiv">
+      <button class="block" onclick="document.getElementById('arith').innerHTML+=0">0</button>
+      <button class="block" onclick="document.getElementById('arith').innerHTML+='.'">.</button>
+      <button class="block long" onclick="document.getElementById('arith').innerHTML=parseFloat(eval(document.getElementById('arith').innerHTML),2)">ANS</button>
+      
+    </div>
+</div>
+    <script >
+      function fun(){
+    let a=document.getElementById('arith').innerHTML;
+    document.getElementById('arith').innerHTML=a.slice(0,a.length-1);
+}
+    </script>
+</body>
+</html>
